@@ -1,0 +1,65 @@
+/**
+* App-wide Styles
+*/
+
+.md-button.md-fab.md-fab-bottom-right {
+  position: fixed;
+}
+
+md-list-item.md-2-line md-divider[md-inset],
+md-list-item.md-3-line md-divider[md-inset] {
+  left: 70px;
+}
+
+.md-avatar > svg {
+  border-radius: 50%;
+}
+md-content .md-avatar > svg {
+  height: 40px;
+  width: 40px;
+}
+
+md-card-actions {
+  margin: 4px 4px 4px 4px !important;
+  padding: 0 !important;
+  color: gray;
+  fill: gray;
+}
+md-card-actions md-icon {
+  height: 16px;
+  width: 16px;
+  color: gray;
+  fill: gray;
+}
+
+.animate-show {
+  transition: 0.75s ease-out opacity;
+  opacity: 1;
+}
+.animate-show.ng-hide {
+  height: 0;
+  min-height: 0;
+  opacity: 0;
+  overflow: hidden;
+}
+
+.main-shell {
+ .profile-container {
+   height: 100%;
+   font-size: 14px;
+
+   .profile-name {
+     font-weight: 500;
+   }
+ }
+}
+
+// Component styles are injected through grunt
+// injector
+@import 'detail/detail.scss';
+@import 'detail/reply/reply.scss';
+@import 'main/main.scss';
+@import 'colors/color-variables.scss';
+@import 'colors/colors.scss';
+@import 'sidenav/sidenav.scss';
+// endinjector

@@ -1,0 +1,6 @@
+md-card {
+  & > md-list-item {
+    & > .md-list-item-text {
+    }
+  }
+}

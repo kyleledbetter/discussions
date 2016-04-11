@@ -1,0 +1,26 @@
+<md-toolbar class="md-hue-2">
+  <span flex></span>
+  <div layout="row" layout-align="start center">
+    <md-icon class="md-avatar" md-svg-icon="avatar:svg-2"></md-icon>
+    <span flex></span>
+  </div>
+  <span flex></span>
+  <div class="md-body-2">Firstname Lastname</div>
+  <div class="md-body-1">email@domainname.com</div>
+</md-toolbar>
+<md-list flex ng-controller="SidenavCtrl">
+  <md-list-item class="md-2-line" ng-repeat="item in menu" ui-sref="{{item.route}}">
+    <md-icon md-svg-icon="{{item.icon}}" aria-label="{{item.title}}"></md-icon>
+    <div class="md-list-item-text">
+      <span class="md-body-2">{{item.title}}</span>
+    </div>
+  </md-list-item>
+  <md-divider></md-divider>
+  <md-subheader  class="md-no-sticky">Management</md-subheader>
+  <md-list-item class="md-2-line" ng-repeat="item in admin" ui-sref="{{item.route}}">
+    <md-icon md-svg-icon="{{item.icon}}" aria-label="{{item.title}}"></md-icon>
+    <div class="md-list-item-text">
+      <span class="md-body-2">{{item.title}}</span>
+    </div>
+  </md-list-item>
+</md-list>

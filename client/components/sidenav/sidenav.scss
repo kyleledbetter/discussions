@@ -1,0 +1,42 @@
+md-sidenav {
+  &.md-sidenav-left > md-toolbar {
+    padding: 15px;
+    height: 150px;
+    min-height: 150px;
+  }
+  md-list-item.md-2-line,
+  md-list-item.md-2-line>.md-no-style {
+    min-height: 0;
+    md-icon:first-child {
+      margin-top: 12px;
+    }
+    .md-button {
+      margin: 0;
+    }
+  }
+  md-divider {
+    margin-top: 4px;
+    margin-bottom: 4px;
+  }
+  md-icon {
+    position: relative;
+    margin-left: 0;
+  }
+  &.md-sidenav-left .md-avatar {
+    height: 64px;
+    width: 64px;
+  }
+  &.md-sidenav-right img {
+    height: 200px;
+    width: 100%;
+  }
+  &.active,
+  &.active md-icon {
+    color: #1565C0;
+    fill: #1565C0;
+  }
+  &.md-sidenav-right {
+    max-width: 100%;
+    width: 100%;
+  }
+}

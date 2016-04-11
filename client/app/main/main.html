@@ -1,0 +1,32 @@
+<md-button class="md-fab md-fab-bottom-right" aria-label="Add" ng-click="ToolbarCtrl.showAddDialog($event)">
+  <md-icon md-svg-icon="content:add" aria-label="Plus"></md-icon>
+</md-button>
+<md-card ng-repeat="item in awesomeThings | filter:search">
+  <md-list-item class="md-2-line" ui-sref="detail">
+      <md-icon class="md-avatar" md-svg-icon="avatar:svg-{{ ($index + 1) % 11 }}"></md-icon>
+      <div class="md-list-item-text">
+        <h3>{{item.name}}</h3>
+        <p>{{item.who}} in <a ui-sref="#">category name</a></p>
+      </div>
+  </md-list-item>
+  <md-divider></md-divider>
+  <md-card-content>
+    <p>{{item.info}}</p>
+  </md-card-content>
+  <md-divider></md-divider>
+  <md-card-actions layout="row" layout-align="space-around center">
+    <md-button flex="none">
+      <md-icon md-svg-icon="action:thumb_up" aria-label="Forward"></md-icon>
+      <span>12</span> <span hide-xs>Likes</span>
+    </md-button>
+    <md-button flex="none">
+      <md-icon md-svg-icon="communication:forum" aria-label="Forward"></md-icon>
+      <span>4</span> <span hide-xs>Replies</span>
+    </md-button>
+    <md-button flex="none">
+      <md-icon md-svg-icon="device:access_time" aria-label="Forward"></md-icon>
+      <span>4</span> <span hide-gt-xs>hrs</span> <span hide-xs>hours ago</span>
+    </md-button>
+    <span flex="grow" hide-xs></span>
+  </md-card-actions>
+</md-card>

@@ -1,0 +1,39 @@
+<md-card>
+  <md-list-item class="md-2-line">
+    <md-button class="md-icon-button" ng-class="{'md-primary': bookmark}" ng-click="bookmark = !bookmark">
+      <md-icon ng-if="bookmark" md-svg-icon="action:bookmark" aria-label="Bookmark"></md-icon>
+      <md-icon ng-if="!bookmark" md-svg-icon="action:bookmark_border" aria-label="Bookmark"></md-icon>
+    </md-button>
+    <md-icon class="md-avatar" md-svg-icon="avatar:svg-3"></md-icon>
+    <div class="md-list-item-text" flex-xs="85">
+      <h3 ipsum="10w"></h3>
+      <p><span ipsum-name="flmf"></span> in <a ui-sref="#" ipsum="1w"></a></p>
+      <md-button class="md-secondary md-raised md-accent">Reply</md-button>
+    </div>
+  </md-list-item>
+  <md-divider></md-divider>
+  <md-card-actions layout="row" layout-align="space-around center">
+    <md-button flex="none">
+      <md-icon md-svg-icon="action:thumb_up" aria-label="Forward"></md-icon>
+      <span>12</span> <span hide-xs>Likes</span>
+    </md-button>
+    <md-button flex="none">
+      <md-icon md-svg-icon="communication:forum" aria-label="Forward"></md-icon>
+      <span>4</span> <span hide-xs>Replies</span>
+    </md-button>
+    <md-button flex="none">
+      <md-icon md-svg-icon="device:access_time" aria-label="Forward"></md-icon>
+      <span>4</span> <span hide-gt-xs>hrs</span> <span hide-xs>hours ago</span>
+    </md-button>
+    <span flex="grow" hide-xs></span>
+  </md-card-actions>
+  <md-divider></md-divider>
+  <md-card-content>
+    <div ipsum="5p"></div>
+  </md-card-content>
+</md-card>
+<div layout="row" layout-align="center start">
+  <div flex-gt-xs="75">
+    <md-card ng-include="'app/detail/reply/reply.html'"></md-card>
+  </div>
+</div>

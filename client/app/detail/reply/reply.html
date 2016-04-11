@@ -1,0 +1,32 @@
+<md-toolbar ng-class="{'md-hue-2': correct, 'md-hue-1': !correct}">
+  <md-list-item class="md-2-line">
+      <md-icon class="md-avatar" md-svg-icon="avatar:svg-3"></md-icon>
+      <div class="md-list-item-text" flex-xs="50">
+        <h3 ipsum="10w"></h3>
+        <p><span ipsum-name="flmf"></span> in <a ui-sref="#" ipsum="1w"></a></p>
+        <md-button class="md-icon-button md-secondary" ng-class="{'md-primary': correct}" ng-click="correct = !correct">
+          <md-icon md-svg-icon="action:check_circle" aria-label="Correct"></md-icon>
+          <md-tooltip ng-if="!correct">Mark as correct</md-tooltip>
+        </md-button>
+      </div>
+  </md-list-item>
+</md-toolbar>
+<md-divider></md-divider>
+<md-card-content>
+  <div ipsum="1p"></div>
+</md-card-content>
+<md-divider></md-divider>
+<md-card-actions layout="row" layout-align="space-around center">
+  <md-button>
+    <md-icon md-svg-icon="content:reply" aria-label="Reply"></md-icon>
+    <span hide-xs>Reply</span>
+  </md-button>
+  <md-button>
+    <md-icon md-svg-icon="social:share" aria-label="Share"></md-icon>
+    <span hide-xs>Share</span>
+  </md-button>
+  <md-button>
+    <md-icon md-svg-icon="social:plus_one" aria-label="Upvote"></md-icon>
+    <span hide-xs>Upvote</span>
+  </md-button>
+</md-card-actions>

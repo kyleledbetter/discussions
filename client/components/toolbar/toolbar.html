@@ -1,0 +1,44 @@
+<div class="md-toolbar-tools" ng-controller="ToolbarCtrl">
+  <md-button ng-click="toggleLeft()" class="md-icon-button" aria-label="Menu" hide-gt-sm ng-if="$state.is('main')">
+    <md-icon md-svg-icon="navigation:menu"></md-icon>
+  </md-button>
+  <md-button back class="md-icon-button" aria-label="Back" ng-cloak ng-if="!$state.is('main')">
+    <md-icon md-svg-icon="navigation:arrow_back"></md-icon>
+  </md-button>
+  <h2>
+    <span>Discussions</span>
+  </h2>
+  <span flex=""></span>
+  <md-menu md-position-mode="target-right target">
+    <md-button aria-label="Open phone interactions menu" class="md-icon-button" ng-click="openMenu($mdOpenMenu, $event)">
+      <md-icon md-menu-origin md-svg-icon="assets/icons/dots-vertical.svg"></md-icon>
+    </md-button>
+    <md-menu-content width="4">
+      <md-menu-item>
+        <md-button ng-click="showAddDialog($event)">
+          <md-icon md-svg-icon="content:add" md-menu-align-target></md-icon>
+          Add
+        </md-button>
+      </md-menu-item>
+      <md-menu-item>
+        <md-button ng-click="redial($event)">
+          <md-icon md-svg-icon="communication:dialpad" md-menu-align-target></md-icon>
+          Redial
+        </md-button>
+      </md-menu-item>
+      <md-menu-item>
+        <md-button disabled="disabled" ng-click="checkVoicemail()">
+          <md-icon md-svg-icon="communication:voicemail"></md-icon>
+          Check voicemail
+        </md-button>
+      </md-menu-item>
+      <md-menu-item>
+        <md-button ng-click="toggleNotifications()">
+          <md-icon md-svg-icon="social:notifications{{notificationsEnabled ? '_off' : ''}}"></md-icon>
+          {{notificationsEnabled ? 'Disable' : 'Enable' }} notifications
+        </md-button>
+      </md-menu-item>
+
+    </md-menu-content>
+  </md-menu>
+</div>
