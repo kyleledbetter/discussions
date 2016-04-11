@@ -2,9 +2,9 @@
 
 angular.module('appApp')
   .controller('ToolbarCtrl', function ($mdSidenav, $mdDialog, $scope, $location) {
-
-
-
+    $scope.searchToggle = function() {
+      $scope.showSearch = !$scope.showSearch;
+    };
     $scope.isActive = function(route) {
       return route === $location.path();
     };

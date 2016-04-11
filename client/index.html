@@ -30,8 +30,9 @@
 
     <!-- Add your site or application content here -->
     <md-sidenav ng-include="'components/sidenav/sidenav.html'" layout="column" class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')"></md-sidenav>
-    <md-content layout="column" layout-fill>
-      <md-toolbar class="md-whiteframe-z1" ng-include="'components/toolbar/toolbar.html'"></md-toolbar>
+    <md-content layout="column" layout-fill ng-controller="ToolbarCtrl">
+      <md-toolbar ng-show="showSearch" class="md-hue-1 md-whiteframe-z1" ng-include="'components/search/search.html'" ></md-toolbar>
+      <md-toolbar ng-hide="showSearch" class="md-whiteframe-z1" ng-include="'components/toolbar/toolbar.html'" ></md-toolbar>
       <md-content class="bgc-grey-300" ui-view flex></md-content>
     </md-content>
 
@@ -77,8 +78,8 @@
           <script src="app/detail/reply/reply.js"></script>
           <script src="app/main/main.controller.js"></script>
           <script src="app/main/main.js"></script>
-          <script src="app/simple/simple.directive.js"></script>
           <script src="components/back/back.directive.js"></script>
+          <script src="components/search/search.controller.js"></script>
           <script src="components/sidenav/sidenav.controller.js"></script>
           <script src="components/toolbar/dialog/dialog.controller.js"></script>
           <script src="components/toolbar/toolbar.controller.js"></script>

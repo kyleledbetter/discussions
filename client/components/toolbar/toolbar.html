@@ -1,4 +1,4 @@
-<div class="md-toolbar-tools" ng-controller="ToolbarCtrl">
+<div class="md-toolbar-tools">
   <md-button ng-click="toggleLeft()" class="md-icon-button" aria-label="Menu" hide-gt-sm ng-if="$state.is('main')">
     <md-icon md-svg-icon="navigation:menu"></md-icon>
   </md-button>
@@ -8,7 +8,11 @@
   <h2>
     <span>Mail Lists <span ng-if="!$state.is('main')">> <span ng-bind="$state.current.data.title"></span></span></span>
   </h2>
-  <span flex=""></span>
+  <span flex></span>
+  <span ng-if="search">search</span>
+  <md-button class="md-icon-button" aria-label="search" ng-click="searchToggle()">
+    <md-icon md-svg-icon="action:search"></md-icon>
+  </md-button>
   <md-menu md-position-mode="target-right target">
     <md-button aria-label="Open phone interactions menu" class="md-icon-button" ng-click="openMenu($mdOpenMenu, $event)">
       <md-icon md-menu-origin md-svg-icon="assets/icons/dots-vertical.svg"></md-icon>
