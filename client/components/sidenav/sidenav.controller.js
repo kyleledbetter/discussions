@@ -5,6 +5,11 @@ angular.module('appApp')
     // Menu items
     $scope.menu = [
       {
+        title: 'Lists',
+        route: 'main',
+        icon: 'action:view_day'
+      },
+      {
         title: 'Discussions',
         route: 'main',
         icon: 'communication:forum'
