@@ -51,7 +51,8 @@ angular.module('appApp', [
     $mdThemingProvider.theme('default')
       .primaryPalette('customPrimary', {
         'default': 'A200',
-        'hue-1': '50'
+        'hue-1': '50',
+        'hue-3': 'A400'
       })
       .accentPalette('teal');
   });
