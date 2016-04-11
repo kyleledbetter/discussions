@@ -6,6 +6,9 @@ angular.module('appApp')
       .state('detail', {
         url: '/detail',
         templateUrl: 'app/detail/detail.html',
-        controller: 'DetailCtrl'
+        controller: 'DetailCtrl',
+        data: {
+          title: 'Detail'
+        }
       });
   });

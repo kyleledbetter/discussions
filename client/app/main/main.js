@@ -6,6 +6,9 @@ angular.module('appApp')
       .state('main', {
         url: '/',
         templateUrl: 'app/main/main.html',
-        controller: 'MainCtrl'
+        controller: 'MainCtrl',
+        data: {
+          title: 'Lists'
+        }
       });
   });

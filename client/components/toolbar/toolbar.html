@@ -6,7 +6,7 @@
     <md-icon md-svg-icon="navigation:arrow_back"></md-icon>
   </md-button>
   <h2>
-    <span>Discussions</span>
+    <span>Mail Lists <span ng-if="!$state.is('main')">> <span ng-bind="$state.current.data.title"></span></span></span>
   </h2>
   <span flex=""></span>
   <md-menu md-position-mode="target-right target">
