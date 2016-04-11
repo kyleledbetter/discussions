@@ -1,21 +1,24 @@
 'use strict';
 
 angular.module('appApp')
-  .controller('SidenavCtrl', function ($scope) {
+  .controller('SidenavCtrl', function ($scope, $mdSidenav) {
+    $scope.toggleLeft = function() {
+      $mdSidenav('left').toggle();
+    };
     // Menu items
     $scope.menu = [
       {
-        title: 'Lists',
+        title: 'All Lists',
         route: 'main',
         icon: 'action:view_day'
       },
       {
-        title: 'Discussions',
-        route: 'main',
+        title: 'List',
+        route: 'list',
         icon: 'communication:forum'
       },
       {
-        title: 'Detail',
+        title: 'Discussion',
         route: 'detail',
         icon: 'communication:chat'
       },
