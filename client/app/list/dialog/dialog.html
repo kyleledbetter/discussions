@@ -1,0 +1,26 @@
+<md-dialog aria-label="Discussion" class="md-dialog-fullscreen">
+  <md-toolbar class="md-hue-1 md-whiteframe-z1">
+    <div class="md-toolbar-tools">
+      <md-button class="md-icon-button" ng-click="cancel()">
+        <md-icon md-svg-icon="navigation:arrow_back" aria-label="Close dialog"></md-icon>
+      </md-button>
+      <h2>Discussion</h2>
+      <span flex></span>
+      <md-button aria-label="bookmark" class="md-icon-button" ng-class="{'md-primary': bookmarked}" ng-click="bookmark()">
+        <md-icon ng-if="bookmarked" md-svg-icon="action:bookmark" aria-label="Bookmark"></md-icon>
+        <md-icon ng-if="!bookmarked" md-svg-icon="action:bookmark_border" aria-label="Bookmark"></md-icon>
+      </md-button>
+    </div>
+  </md-toolbar>
+  <md-dialog-content class="bgc-grey-200 md-padding" ng-include="'app/detail/detail.html'">
+  </md-dialog-content>
+  <md-dialog-actions layout="row" class="md-whiteframe-z1">
+    <md-button ng-click="answer('useful')">
+      Edit
+    </md-button>
+    <span flex></span>
+    <md-button ng-click="answer('useful')" style="margin-right:20px;">
+      Delete
+    </md-button>
+  </md-dialog-actions>
+</md-dialog>

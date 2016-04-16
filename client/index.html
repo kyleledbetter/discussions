@@ -29,7 +29,7 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <md-sidenav ng-include="'components/sidenav/sidenav.html'" layout="column" class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')"></md-sidenav>
+    <md-sidenav ng-include="'components/sidenav/sidenav.html'" layout="column" class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')"></md-sidenav>
     <md-content layout="column" layout-fill ng-controller="ToolbarCtrl">
       <md-toolbar ng-show="showSearch" class="md-hue-1 md-whiteframe-z1" ng-include="'components/search/search.html'" ></md-toolbar>
       <md-toolbar ng-hide="showSearch" class="md-whiteframe-z1" ng-include="'components/toolbar/toolbar.html'" ></md-toolbar>
@@ -72,12 +72,14 @@
 
         <script src="app/app.js"></script>
           <!-- injector:js -->
-          <script src="app/list/list.controller.js"></script>
-          <script src="app/list/list.js"></script>
           <script src="app/detail/detail.controller.js"></script>
           <script src="app/detail/detail.js"></script>
+          <script src="app/detail/reply/form/form.controller.js"></script>
+          <script src="app/detail/reply/form/form.js"></script>
           <script src="app/detail/reply/reply.controller.js"></script>
           <script src="app/detail/reply/reply.js"></script>
+          <script src="app/list/list.controller.js"></script>
+          <script src="app/list/list.js"></script>
           <script src="app/main/main.controller.js"></script>
           <script src="app/main/main.js"></script>
           <script src="components/back/back.directive.js"></script>

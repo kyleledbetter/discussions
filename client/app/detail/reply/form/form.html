@@ -1,0 +1,32 @@
+<md-bottom-sheet layout="column" class="md-bottomsheet-fullscreen bgc-grey-100">
+  <md-toolbar class="md-hue-1 md-whiteframe-z1">
+    <div class="md-toolbar-tools">
+      <md-button class="md-icon-button" ng-click="listItemClick()">
+        <md-icon md-svg-icon="navigation:arrow_back" aria-label="Close dialog"></md-icon>
+      </md-button>
+      <h2>Reply</h2>
+      <span flex></span>
+      <md-button aria-label="save" class="md-primary md-icon-button" ng-click="saveReply()">
+        <md-icon md-svg-icon="action:check_circle" aria-label="check"></md-icon>
+      </md-button>
+    </div>
+  </md-toolbar>
+  <form layout="column" flex="grow" layout-margin>
+    <md-card layout-gt-sm="row" class="md-whiteframe-z1 md-padding">
+      <md-input-container class="md-block" flex-gt-sm>
+        <label>Name</label>
+        <input ng-model="reply.name">
+      </md-input-container>
+      <md-input-container class="md-block" flex-gt-sm>
+        <label>Title</label>
+        <input ng-model="reply.title">
+      </md-input-container>
+    </md-card>
+    <md-card class="md-whiteframe-z1 md-padding">
+      <md-input-container class="md-block">
+        <label>Reply</label>
+        <textarea class="md-textarea-tall" ng-model="reply.message" md-maxlength="10000" rows="20" md-select-on-focus></textarea>
+      </md-input-container>
+    </md-card>
+  </form>
+</md-bottom-sheet>

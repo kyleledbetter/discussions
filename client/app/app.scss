@@ -2,10 +2,9 @@
 * App-wide Styles
 */
 
-.md-button.md-fab.md-fab-bottom-right {
+.md-fixed {
   position: fixed;
 }
-
 md-list-item.md-2-line md-divider[md-inset],
 md-list-item.md-3-line md-divider[md-inset] {
   left: 70px;
@@ -31,7 +30,30 @@ md-card-actions md-icon {
   color: gray;
   fill: gray;
 }
-
+md-dialog.md-dialog-fullscreen {
+  min-height: 100%;
+  min-width: 100%;
+  border-radius: 0;
+}
+md-bottom-sheet.md-bottomsheet-fullscreen {
+  top: 0;
+  z-index: 81;
+  margin-top: -80px;
+  &.ng-enter-active {
+    opacity: 1;
+    display: block;
+  }
+  & > md-toolbar {
+    margin: -10px -15px 20px -15px;
+    width: calc(100% + 30px);
+  }
+}
+md-input-container {
+  textarea.md-input {
+    height: 30%;
+    min-height: 30%;
+  }
+}
 .animate-show {
   transition: 0.75s ease-out opacity;
   opacity: 1;
@@ -57,6 +79,7 @@ md-card-actions md-icon {
 // Component styles are injected through grunt
 // injector
 @import 'detail/detail.scss';
+@import 'detail/reply/form/form.scss';
 @import 'detail/reply/reply.scss';
 @import 'list/list.scss';
 @import 'main/main.scss';

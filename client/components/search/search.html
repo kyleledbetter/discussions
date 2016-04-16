@@ -6,8 +6,8 @@
     <span>Back</span>
   </h2>
   <span flex="5"></span>
-  <span ng-controller="AutoComplete as ctrl" flex>
-    <md-autocomplete md-theme="input"
+  <span ng-controller="AutoComplete as ctrl" flex="auto">
+    <md-autocomplete
       md-input-name="autocompleteField"
       md-no-cache="ctrl.noCache"
       md-selected-item="ctrl.selectedItem"
@@ -25,4 +25,6 @@
       </div>
     </md-autocomplete>
   </span>
+  <span flex="5"></span>
+  <md-button class="md-raised">Advanced Search</md-button>
 </div>

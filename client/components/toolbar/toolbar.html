@@ -1,12 +1,12 @@
 <div class="md-toolbar-tools">
-  <md-button ng-click="toggleLeft()" class="md-icon-button" aria-label="Menu" hide-gt-sm ng-if="$state.is('main')">
+  <md-button ng-click="toggleLeft()" class="md-icon-button" aria-label="Menu" hide-gt-md ng-if="$state.is('main')">
     <md-icon md-svg-icon="navigation:menu"></md-icon>
   </md-button>
   <md-button back class="md-icon-button" aria-label="Back" ng-cloak ng-if="!$state.is('main')">
     <md-icon md-svg-icon="navigation:arrow_back"></md-icon>
   </md-button>
   <h2>
-    <span>Mail Lists <span ng-if="!$state.is('main')">> <span ng-bind="$state.current.data.title"></span></span></span>
+    <span>Silo <span ng-if="!$state.is('main')">> <span ng-bind="$state.current.data.title"></span></span></span>
   </h2>
   <span flex></span>
   <span ng-if="search">search</span>

@@ -1,0 +1,8 @@
+.md-list-card {
+  position: relative;
+  outline: none;
+  &:hover {
+    background-color: #EDE7F6;
+    cursor: pointer;
+  }
+}

@@ -1,14 +1,26 @@
-<md-button class="md-fab md-fab-bottom-right" aria-label="Add" ng-click="ToolbarCtrl.showAddDialog($event)">
-  <md-icon md-svg-icon="content:add" aria-label="Plus"></md-icon>
-</md-button>
-<md-card>
-  <md-list-item class="md-3-line" ui-sref="list" ng-repeat="item in awesomeThings | filter:search">
-      <md-icon class="md-avatar" md-svg-icon="avatar:svg-{{ ($index + 1) % 11 }}"></md-icon>
-      <div class="md-list-item-text">
-        <h3>{{item.name}}</h3>
-        <h4>{{item.info}}</h4>
-        <p>21 Topics</p>
-      </div>
-      <md-divider ng-if="!$last"></md-divider>
-  </md-list-item>
-</md-card>
+<md-toolbar class="md-tall md-toolbar-under">
+  <md-button class="md-fab md-fab-bottom-right" aria-label="Add" ng-click="ToolbarCtrl.showAddDialog($event)">
+    <md-icon md-svg-icon="content:add" aria-label="Plus"></md-icon>
+  </md-button>
+</md-toolbar>
+<div layout-gt-xs="row" layout-align-gt-xs="center start">
+  <div flex-gt-xs="75">
+    <md-card class="md-card-over">
+      <md-card-header>
+        <md-card-header-text>
+          <span class="md-title">Mail Lists</span>
+          <span class="md-subhead">for your company</span>
+        </md-card-header-text>
+      </md-card-header>
+      <md-list-item class="md-3-line" ui-sref="list" ng-repeat="item in awesomeThings | filter:search">
+          <md-icon class="md-avatar" md-svg-icon="avatar:svg-{{ ($index + 1) % 11 }}"></md-icon>
+          <div class="md-list-item-text">
+            <h3>{{item.name}}</h3>
+            <h4>{{item.info}}</h4>
+            <p>21 Topics</p>
+          </div>
+          <md-divider ng-if="!$last"></md-divider>
+      </md-list-item>
+    </md-card>
+  </div>
+</div>

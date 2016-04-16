@@ -8,17 +8,17 @@ angular.module('appApp')
     // Menu items
     $scope.menu = [
       {
-        title: 'All Lists',
+        title: 'Mail Lists',
         route: 'main',
         icon: 'action:view_day'
       },
       {
-        title: 'List',
+        title: 'List Discussions',
         route: 'list',
         icon: 'communication:forum'
       },
       {
-        title: 'Discussion',
+        title: 'Discussion Detail',
         route: 'detail',
         icon: 'communication:chat'
       },
