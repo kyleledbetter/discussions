@@ -7,9 +7,14 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <base href="/">
-    <title></title>
+    <title>Silo Mail List</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
+    <link rel="icon" type="image/png" href="assets/ico/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="assets/ico/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="assets/ico/favicon-96x96.png" sizes="96x96">
+    <meta name="msapplication-TileColor" content="#6A1B9A">
+    <meta name="theme-color" content="#6A1B9A">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(client) app/vendor.css -->
       <!-- bower:css -->
@@ -30,7 +35,7 @@
 
     <!-- Add your site or application content here -->
     <md-sidenav ng-include="'components/sidenav/sidenav.html'" layout="column" class="md-sidenav-left md-whiteframe-z2 bgc-blue-grey-50" md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')"></md-sidenav>
-    <md-content layout="column" layout-fill ng-controller="ToolbarCtrl">
+    <md-content layout="column" layout-fill ng-controller="ToolbarCtrl" id="main">
       <md-toolbar ng-show="showSearch" class="md-hue-1 md-whiteframe-z1" ng-include="'components/search/search.html'" ></md-toolbar>
       <md-toolbar ng-hide="showSearch" class="md-whiteframe-z1" ng-include="'components/toolbar/toolbar.html'" ></md-toolbar>
       <md-content class="bgc-blue-grey-100" ui-view flex></md-content>
