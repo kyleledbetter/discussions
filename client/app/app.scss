@@ -3,15 +3,21 @@
 */
 
 .md-fixed {
-  position: fixed;
+  position: fixed !important;
 }
 md-list-item.md-2-line md-divider[md-inset],
 md-list-item.md-3-line md-divider[md-inset] {
   left: 70px;
 }
-
+.md-list-item-wrap {
+  white-space: normal;
+}
 .md-avatar > svg {
   border-radius: 50%;
+}
+.md-icon-48 {
+  height: 48px;
+  width: 48px;
 }
 md-content .md-avatar > svg {
   height: 40px;
@@ -85,5 +91,6 @@ md-input-container {
 @import 'main/main.scss';
 @import 'colors/color-variables.scss';
 @import 'colors/colors.scss';
+@import 'colors/fill.scss';
 @import 'sidenav/sidenav.scss';
 // endinjector
