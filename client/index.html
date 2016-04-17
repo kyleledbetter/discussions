@@ -29,11 +29,11 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <md-sidenav ng-include="'components/sidenav/sidenav.html'" layout="column" class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')"></md-sidenav>
+    <md-sidenav ng-include="'components/sidenav/sidenav.html'" layout="column" class="md-sidenav-left md-whiteframe-z2 bgc-blue-grey-50" md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')"></md-sidenav>
     <md-content layout="column" layout-fill ng-controller="ToolbarCtrl">
       <md-toolbar ng-show="showSearch" class="md-hue-1 md-whiteframe-z1" ng-include="'components/search/search.html'" ></md-toolbar>
       <md-toolbar ng-hide="showSearch" class="md-whiteframe-z1" ng-include="'components/toolbar/toolbar.html'" ></md-toolbar>
-      <md-content class="bgc-grey-300" ui-view flex></md-content>
+      <md-content class="bgc-blue-grey-100" ui-view flex></md-content>
     </md-content>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->

@@ -1,7 +1,7 @@
 <md-toolbar class="md-hue-2">
   <span flex></span>
   <div layout="row" layout-align="start center">
-    <md-icon class="md-avatar" md-svg-icon="avatar:svg-2"></md-icon>
+    <md-icon class="md-avatar" md-svg-icon="avatar:svg-8"></md-icon>
     <span flex></span>
   </div>
   <span flex></span>
@@ -16,7 +16,6 @@
     </div>
   </md-list-item>
   <md-divider></md-divider>
-  <md-subheader  class="md-no-sticky">Management</md-subheader>
   <md-list-item class="md-2-line" ng-repeat="item in admin" ui-sref="{{item.route}}" ng-click="toggleLeft()">
     <md-icon md-svg-icon="{{item.icon}}" aria-label="{{item.title}}"></md-icon>
     <div class="md-list-item-text">

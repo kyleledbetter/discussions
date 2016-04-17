@@ -42,7 +42,7 @@ angular.module('appApp', [
     $locationProvider.html5Mode(true);
   })
   .config(function ($mdThemingProvider) {
-    var customPrimaryMap = 		$mdThemingProvider.extendPalette('deep-purple', {
+    var customPrimaryMap = 		$mdThemingProvider.extendPalette('purple', {
       'contrastDefaultColor': 'light',
       'contrastDarkColors': ['50'],
       '50': 'ffffff'
@@ -50,9 +50,13 @@ angular.module('appApp', [
     $mdThemingProvider.definePalette('customPrimary', customPrimaryMap);
     $mdThemingProvider.theme('default')
       .primaryPalette('customPrimary', {
-        'default': 'A200',
+        'default': '700',
+        'hue-1': '50',
+        'hue-3': '800'
+      })
+      .accentPalette('green', {
+        'default': '600',
         'hue-1': '50',
         'hue-3': 'A400'
-      })
-      .accentPalette('teal');
+      });
   });
