@@ -1,12 +1,30 @@
 'use strict';
 
 angular.module('appApp')
-  .controller('ListCtrl', function ($scope, $http, $state, $mdDialog, $mdMedia) {
+  .controller('ListCtrl', function ($scope, $http, $state, $mdDialog, $mdMedia, $mdToast) {
     $scope.awesomeThings = [];
     $scope.$state = $state;
     $http.get('/api/things').success(function(awesomeThings) {
       $scope.awesomeThings = awesomeThings;
     });
+    $scope.join = function() {
+      $mdToast.show({
+        hideDelay: 1000,
+        position: 'top right',
+        // controller: 'ToastCtrl',
+        templateUrl: 'app/list/join/join.html'
+      });
+      $scope.joined = !$scope.joined;
+    };
+    $scope.leave = function(){
+      $mdToast.show(
+        $mdToast.simple()
+          .textContent('Bye! We\'ll remember the good times!')
+          .position('top right')
+          .hideDelay(1000)
+      );
+      $scope.joined = !$scope.joined;
+    };
     $scope.getColor = function($index) {
       var _d = ($index + 1) % 11;
       var bg = '';
@@ -59,6 +77,7 @@ angular.module('appApp')
       $mdDialog.show({
         controller: DialogController,
         templateUrl: 'app/list/dialog/dialog.html',
+        parent: angular.element(document.querySelector('#main')),
         // parent: angular.element(document.body),
         targetEvent: ev,
         clickOutsideToClose: true
@@ -92,7 +111,7 @@ angular.module('appApp')
         $mdToast.simple()
           .textContent('Bookmarked!')
           .position('top right')
-          .hideDelay(3000)
+          .hideDelay(2000)
       );
     };
     $scope.alert = '';
@@ -100,7 +119,8 @@ angular.module('appApp')
       $scope.alert = '';
       $mdBottomSheet.show({
         templateUrl: 'app/detail/reply/form/form.html',
-        controller: 'FormCtrl'
+        controller: 'FormCtrl',
+        parent: angular.element(document.querySelector('#main'))
       });
     };
   }
