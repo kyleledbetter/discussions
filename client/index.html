@@ -38,7 +38,7 @@
     <md-content layout="column" layout-fill ng-controller="ToolbarCtrl" id="main">
       <md-toolbar ng-show="showSearch" class="md-hue-1 md-whiteframe-z1" ng-include="'components/search/search.html'" ></md-toolbar>
       <md-toolbar ng-hide="showSearch" class="md-whiteframe-z1" ng-include="'components/toolbar/toolbar.html'" ></md-toolbar>
-      <md-content class="bgc-blue-grey-100" ui-view flex></md-content>
+      <md-content class="bgc-blue-grey-100" ui-view flex layout-fill></md-content>
     </md-content>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -81,6 +81,8 @@
           <script src="app/bookmarks/bookmarks.js"></script>
           <script src="app/detail/detail.controller.js"></script>
           <script src="app/detail/detail.js"></script>
+          <script src="app/detail/form/form.controller.js"></script>
+          <script src="app/detail/form/form.js"></script>
           <script src="app/detail/reply/form/form.controller.js"></script>
           <script src="app/detail/reply/form/form.js"></script>
           <script src="app/detail/reply/reply.controller.js"></script>
