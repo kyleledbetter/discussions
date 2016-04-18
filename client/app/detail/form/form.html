@@ -1,0 +1,88 @@
+<form>
+  <md-toolbar class="md-hue-1 md-whiteframe-z1">
+    <div class="md-toolbar-tools">
+      <div layout="row" layout-align="start center">
+        <md-button class="md-raised md-accent">Post</md-button>
+        <md-button class="md-raised md-primary">Save Draft</md-button>
+        <md-button>Cancel</md-button>
+      </div>
+    </div>
+  </md-toolbar>
+  <md-card class="md-whiteframe-z1 md-padding">
+
+    <md-input-container class="md-block">
+      <label>Name</label>
+      <input ng-model="reply.name">
+    </md-input-container>
+    <md-input-container class="md-block">
+      <label>Subject</label>
+      <input ng-model="reply.title">
+    </md-input-container>
+    <md-input-container ng-if="cc" class="md-block">
+      <label>Cc</label>
+      <input ng-model="reply.cc">
+    </md-input-container>
+     <div layout="row" layout-align="space-between center">
+       <md-checkbox ng-model="reply.updates" aria-label="Checkbox">Email updates to me</md-checkbox>
+       <md-button aria-label="Cc" class="md-raised" ng-click="cc = !cc">
+         <span ng-if="!cc">Add Cc</span>
+         <span ng-if="cc">Remove Cc</span>
+       </md-button>
+     </div>
+  </md-card>
+  <md-card class="md-whiteframe-z1">
+    <md-toolbar class="md-hue-1">
+      <md-fab-actions class="md-toolbar-tools">
+        <md-button aria-label="button" class="md-icon-button">
+          <md-icon md-svg-icon="editor:format_bold"></md-icon>
+        </md-button>
+        <md-button aria-label="button" class="md-icon-button">
+          <md-icon md-svg-icon="editor:format_italic"></md-icon>
+        </md-button>
+        <md-button aria-label="button" class="md-icon-button">
+          <md-icon md-svg-icon="editor:format_underlined"></md-icon>
+        </md-button>
+        <md-button aria-label="button" class="md-icon-button">
+          <md-icon md-svg-icon="editor:format_quote"></md-icon>
+        </md-button>
+        <md-button aria-label="button" class="md-icon-button">
+          <md-icon md-svg-icon="editor:strikethrough_s"></md-icon>
+        </md-button>
+        <md-button aria-label="button" class="md-icon-button">
+          <md-icon md-svg-icon="editor:insert_link"></md-icon>
+        </md-button>
+        <md-button aria-label="button" class="md-icon-button">
+          <md-icon md-svg-icon="editor:insert_photo"></md-icon>
+        </md-button>
+        <md-button aria-label="button" class="md-icon-button">
+          <md-icon md-svg-icon="editor:insert_drive_file"></md-icon>
+        </md-button>
+        <md-button aria-label="button" class="md-icon-button">
+          <md-icon md-svg-icon="editor:format_list_bulleted"></md-icon>
+        </md-button>
+        <md-button aria-label="button" class="md-icon-button">
+          <md-icon md-svg-icon="editor:format_list_numbered"></md-icon>
+        </md-button>
+        <md-button aria-label="button" class="md-icon-button">
+          <md-icon md-svg-icon="editor:format_list_numbered"></md-icon>
+        </md-button>
+        <md-button aria-label="button" class="md-icon-button">
+          <md-icon md-svg-icon="editor:format_align_left"></md-icon>
+        </md-button>
+        <md-button aria-label="button" class="md-icon-button">
+          <md-icon md-svg-icon="editor:format_align_center"></md-icon>
+        </md-button>
+        <md-button aria-label="button" class="md-icon-button">
+          <md-icon md-svg-icon="editor:format_align_right"></md-icon>
+        </md-button>
+      </md-fab-actions>
+    </md-toolbar>
+    <md-divider></md-divider>
+    <div class="md-padding">
+      <md-input-container class="md-block">
+        <label>Reply</label>
+        <textarea class="md-textarea-tall" ng-model="reply.message" md-maxlength="10000" rows="20" md-select-on-focus md-autofocus></textarea>
+      </md-input-container>
+    </div>
+  </md-card>
+</form>
