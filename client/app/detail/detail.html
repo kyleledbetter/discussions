@@ -1,36 +1,72 @@
-<md-card>
-  <md-list-item class="md-2-line">
-    <md-icon class="md-avatar md-avatar-icon" md-svg-icon="avatar:svg-3"></md-icon>
-    <div class="md-list-item-text" flex-xs="85">
-      <h3 ipsum="10w"></h3>
-      <p><span ipsum-name="flmf"></span> in <a ui-sref="#" ipsum="1w"></a></p>
-      <md-button class="md-secondary md-raised md-accent" ng-click="replyForm()">Reply</md-button>
+<div layout-gt-xs="column" layout-margin>
+  <md-card>
+    <md-list-item class="md-2-line">
+      <md-icon class="md-avatar md-avatar-icon" md-svg-icon="avatar:svg-3"></md-icon>
+      <div class="md-list-item-text" flex-xs="85">
+        <h3 ipsum="10w"></h3>
+        <p><span ipsum-name="flmf"></span> in <a ui-sref="#" ipsum="1w"></a></p>
+
+        <md-menu md-offset="55 -5" class="md-secondary" md-position-mode="target-right target">
+          <md-button aria-label="menu" class="md-raised md-accent" ng-click="openMenu($mdOpenMenu, $event)">
+            <md-icon md-menu-origin md-svg-icon="content:reply_all"></md-icon> Reply
+          </md-button>
+          <md-menu-content width="4">
+            <md-menu-item>
+              <md-button ng-click="replyForm()">
+                <md-icon md-svg-icon="content:reply_all"></md-icon> Reply All
+              </md-button>
+            </md-menu-item>
+            <md-menu-item>
+              <md-button ng-click="replyForm()">
+                <md-icon md-svg-icon="content:reply"></md-icon> Reply to author
+              </md-button>
+            </md-menu-item>
+            <md-menu-item>
+              <md-button>
+                <md-icon md-svg-icon="content:link"></md-icon> Copy link
+              </md-button>
+            </md-menu-item>
+            <md-menu-item>
+              <md-button>
+                <md-icon md-svg-icon="action:print"></md-icon> Print
+              </md-button>
+            </md-menu-item>
+            <md-menu-divider></md-menu-divider>
+            <md-menu-item>
+              <md-button>
+                <md-icon md-svg-icon="content:report"></md-icon> Report abuse
+              </md-button>
+            </md-menu-item>
+          </md-menu-content>
+        </md-menu>
+      </div>
+    </md-list-item>
+    <md-divider></md-divider>
+    <md-card-actions layout="row" layout-align="space-around center">
+      <md-button flex="none">
+        <md-icon md-svg-icon="action:thumb_up" aria-label="Forward"></md-icon>
+        <span>12</span> <span hide-xs>Likes</span>
+      </md-button>
+      <md-button flex="none" href="#replies">
+        <md-icon md-svg-icon="communication:forum" aria-label="Forward"></md-icon>
+        <span>4</span> <span hide-xs>Replies</span>
+      </md-button>
+      <md-button flex="none">
+        <md-icon md-svg-icon="device:access_time" aria-label="Forward"></md-icon>
+        <span>4</span> <span hide-gt-xs>hrs</span> <span hide-xs>hours ago</span>
+      </md-button>
+      <span flex="grow" hide-xs></span>
+    </md-card-actions>
+    <md-divider></md-divider>
+    <md-card-content>
+      <div ipsum="5p"></div>
+    </md-card-content>
+  </md-card>
+  <div layout="row" layout-align="center start">
+    <div flex-gt-xs="75">
+      <h3 class="md-headline" id="replies">Replies</h3>
+      <md-card ng-include="'app/detail/reply/reply.html'"></md-card>
     </div>
-  </md-list-item>
-  <md-divider></md-divider>
-  <md-card-actions layout="row" layout-align="space-around center">
-    <md-button flex="none">
-      <md-icon md-svg-icon="action:thumb_up" aria-label="Forward"></md-icon>
-      <span>12</span> <span hide-xs>Likes</span>
-    </md-button>
-    <md-button flex="none" href="#replies">
-      <md-icon md-svg-icon="communication:forum" aria-label="Forward"></md-icon>
-      <span>4</span> <span hide-xs>Replies</span>
-    </md-button>
-    <md-button flex="none">
-      <md-icon md-svg-icon="device:access_time" aria-label="Forward"></md-icon>
-      <span>4</span> <span hide-gt-xs>hrs</span> <span hide-xs>hours ago</span>
-    </md-button>
-    <span flex="grow" hide-xs></span>
-  </md-card-actions>
-  <md-divider></md-divider>
-  <md-card-content>
-    <div ipsum="5p"></div>
-  </md-card-content>
-</md-card>
-<div layout="row" layout-align="center start">
-  <div flex-gt-xs="75">
-    <h3 class="md-headline" id="replies">Replies</h3>
-    <md-card ng-include="'app/detail/reply/reply.html'"></md-card>
   </div>
+
 </div>
