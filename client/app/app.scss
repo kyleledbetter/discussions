@@ -84,11 +84,14 @@ md-input-container {
 
 // Component styles are injected through grunt
 // injector
+@import 'bookmarks/bookmarks.scss';
 @import 'detail/detail.scss';
 @import 'detail/reply/form/form.scss';
 @import 'detail/reply/reply.scss';
 @import 'list/list.scss';
 @import 'main/main.scss';
+@import 'settings/settings.scss';
+@import 'users/users.scss';
 @import 'colors/color-variables.scss';
 @import 'colors/colors.scss';
 @import 'colors/fill.scss';

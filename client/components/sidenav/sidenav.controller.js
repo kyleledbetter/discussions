@@ -24,24 +24,19 @@ angular.module('appApp')
       },
       {
         title: 'Bookmarks',
-        route: 'main',
+        route: 'bookmarks',
         icon: 'action:book'
       }
     ];
     $scope.admin = [
       {
-        title: 'Teams',
-        route: 'main',
-        icon: 'social:people'
-      },
-      {
-        title: 'Users',
-        route: 'main',
+        title: 'Teams & Users',
+        route: 'users',
         icon: 'communication:contacts'
       },
       {
         title: 'Settings',
-        route: 'main',
+        route: 'settings',
         icon: 'action:settings'
       }
     ];
