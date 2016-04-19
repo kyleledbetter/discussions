@@ -13,29 +13,31 @@
         </md-card-header-text>
       </md-card-header>
       <md-divider></md-divider>
-      <md-list-item class="md-3-line" ui-sref="list" ng-repeat="item in awesomeThings | filter:search">
-        <md-icon class="" md-svg-src="assets/icons/ic_{{item.icon}}_24px.svg"></md-icon>
-        <div class="md-list-item-text">
-          <h3>{{item.name}}</h3>
-          <h4><span class="md-list-item-wrap">{{item.info}}</span></h4>
-          <p layout="row" layout-align="space-around center" layout-margin>
-            <span flex="none" class="md-caption tc-grey-600">
-              <md-icon class="fill-grey-500" md-svg-icon="social:people_outline" aria-label="icon"></md-icon>
-              <span>23</span> <span hide-xs>Members</span>
-            </span>
-            <span flex="none" class="md-caption tc-grey-600">
-              <md-icon class="fill-grey-500" md-svg-icon="communication:chat" aria-label="icon"></md-icon>
-              <span>12</span> <span hide-xs>Discussions</span>
-            </span>
-            <span flex="none" class="md-caption tc-grey-600">
-              <md-icon class="fill-grey-500" md-svg-icon="action:today" aria-label="icon"></md-icon>
-              <span hide-gt-xs>04/16/2016</span> <span hide-xs>Created April 16, 2016</span>
-            </span>
-            <span flex="grow" hide-xs></span>
-          </p>
-        </div>
-        <md-divider ng-if="!$last"></md-divider>
-      </md-list-item>
+      <md-list>
+        <md-list-item class="md-3-line" ui-sref="list" ng-repeat="item in awesomeThings | filter:search">
+          <md-icon class="" md-svg-src="assets/icons/ic_{{item.icon}}_24px.svg"></md-icon>
+          <div class="md-list-item-text">
+            <h3>{{item.name}}</h3>
+            <h4><span class="md-list-item-wrap">{{item.info}}</span></h4>
+            <p layout="row" layout-align="space-around center" layout-margin>
+              <span flex="none" class="md-caption tc-grey-600">
+                <md-icon class="fill-grey-500" md-svg-icon="social:people_outline" aria-label="icon"></md-icon>
+                <span>23</span> <span hide-xs>Members</span>
+              </span>
+              <span flex="none" class="md-caption tc-grey-600">
+                <md-icon class="fill-grey-500" md-svg-icon="communication:chat" aria-label="icon"></md-icon>
+                <span>12</span> <span hide-xs>Discussions</span>
+              </span>
+              <span flex="none" class="md-caption tc-grey-600">
+                <md-icon class="fill-grey-500" md-svg-icon="action:today" aria-label="icon"></md-icon>
+                <span hide-gt-xs>04/16/2016</span> <span hide-xs>Created April 16, 2016</span>
+              </span>
+              <span flex="grow" hide-xs></span>
+            </p>
+          </div>
+          <md-divider ng-if="!$last"></md-divider>
+        </md-list-item>
+      </md-list>
     </md-card>
   </div>
 </div>
