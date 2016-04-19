@@ -1,14 +1,14 @@
 <div layout-gt-xs="column" layout-margin>
-  <md-card class="md-list-card" ng-repeat="item in awesomeThings | filter:search" ng-click="showDetail($event)" md-ink-ripple="#651FFF">
-    <md-list-item class="md-2-line">
+  <md-card ng-repeat="item in awesomeThings | filter:search">
+    <md-list-item class="md-2-line" ng-click="showDetail($event)">
         <md-icon class="md-avatar md-avatar-icon" md-svg-icon="avatar:svg-{{ ($index + 1) % 11 }}"></md-icon>
         <div class="md-list-item-text">
           <h3>{{item.name}}</h3>
           <p>{{item.who}} in <span>category name</span></p>
         </div>
-        <md-button aria-label="bookmark" class="md-secondary md-icon-button" ng-class="{'md-primary': bookmarked}" ng-click="bookmark()">
-          <md-icon ng-if="bookmarked" md-svg-icon="action:bookmark" aria-label="Bookmark"></md-icon>
-          <md-icon ng-if="!bookmarked" md-svg-icon="action:bookmark_border" aria-label="Bookmark"></md-icon>
+        <md-button aria-label="bookmark" class="md-secondary md-icon-button" ng-class="{'md-primary': item.bookmarked}" ng-click="bookmark()">
+          <md-icon ng-if="item.bookmarked" md-svg-icon="action:bookmark" aria-label="Bookmark"></md-icon>
+          <md-icon ng-if="!item.bookmarked" md-svg-icon="action:bookmark_border" aria-label="Bookmark"></md-icon>
         </md-button>
     </md-list-item>
     <md-divider></md-divider>
