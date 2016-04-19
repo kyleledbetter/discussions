@@ -68,7 +68,7 @@
       <md-button class="md-primary"><md-icon class="md-primary" md-svg-icon="navigation:arrow_forward"></md-icon> More</md-button>
     </md-card-actions>
   </md-card>
-  <md-card class="md-list-card" ng-repeat="item in awesomeThings | filter:search" ng-click="showDetail($event)" md-ink-ripple="#651FFF">
+  <md-card class="md-list-card" ng-repeat="item in awesomeThings | filter:search" ui-sref="list-discussion" md-ink-ripple="#651FFF">
     <md-list-item class="md-2-line">
         <md-icon class="md-avatar md-avatar-icon" md-svg-icon="avatar:svg-{{ ($index + 1) % 11 }}"></md-icon>
         <div class="md-list-item-text">
