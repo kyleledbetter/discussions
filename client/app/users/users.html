@@ -40,16 +40,34 @@
   </div>
   <div flex-gt-xs="65">
     <md-card>
-      <md-card-header>
+      <md-card-header ng-if="!selected">
         <md-card-header-text>
           <span class="md-title">All Users</span>
           <span class="md-subhead">Users from all teams</span>
         </md-card-header-text>
       </md-card-header>
+      <md-toolbar class="md-hue-1 bgc-light-blue-50" ng-if="selected">
+        <div class="md-toolbar-tools">
+          <span class="md-body-1">{{selected.length}} {{selected.length > 1 ? 'items' : 'item'}} selected</span>
+          <span flex></span>
+          <md-button class="md-icon-button">
+            <md-icon md-svg-icon="social:person_add"></md-icon>
+            <md-tooltip>Add to group</md-tooltip>
+          </md-button>
+          <md-button class="md-icon-button">
+            <md-icon md-svg-icon="communication:call_merge"></md-icon>
+            <md-tooltip>Merge user records</md-tooltip>
+          </md-button>
+          <md-button class="md-icon-button">
+            <md-icon md-svg-icon="action:delete"></md-icon>
+            <md-tooltip>Delete</md-tooltip>
+          </md-button>
+        </div>
+      </md-toolbar>
       <md-divider></md-divider>
       <md-list>
         <md-list-item ng-repeat="item in getNumber(number) track by $index">
-            <md-checkbox ng-model="message.selected"></md-checkbox>
+            <md-checkbox ng-model="item.selected" ng-click="$parent.selected = !$parent.selected"></md-checkbox>
             <md-icon class="md-avatar md-avatar-icon" md-svg-icon="avatar:svg-{{ ($index + 1) % 11 }}"></md-icon>
             <p>{{ person.name || 'Firstname Lastname'}}</p>
             <md-menu class="md-secondary" md-position-mode="target-right target">
