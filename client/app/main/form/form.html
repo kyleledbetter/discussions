@@ -1,5 +1,19 @@
-<md-tabs class="md-primary" md-stretch-tabs="always" md-no-pagination>
-  <md-tab label="List Info" ui-sref="main-form.info" md-active="controller.isActive('info')"></md-tab>
-  <md-tab label="Invite Users" ui-sref="main-form.users" md-active="controller.isActive('users')"></md-tab>
-</md-tabs>
-<div flex ui-view="mainform"></div>
+<form>
+  <md-toolbar class="md-hue-1 md-whiteframe-z1">
+    <div class="md-toolbar-tools">
+      <div layout="row" layout-align="start center">
+        <md-button class="md-raised md-accent">Create List</md-button>
+        <md-button>Cancel</md-button>
+      </div>
+    </div>
+  </md-toolbar>
+  <md-card>
+    <md-tabs md-border-bottom md-stretch-tabs="always" md-no-pagination>
+      <md-tab label="List Info" ui-sref="main-form.info" md-active="controller.isActive('info')"></md-tab>
+      <md-tab label="Invite Users" ui-sref="main-form.users" md-active="controller.isActive('users')"></md-tab>
+    </md-tabs>
+    <md-card-content>
+      <div flex ui-view="mainform"></div>
+    </md-card-content>
+  </md-card>
+</form>

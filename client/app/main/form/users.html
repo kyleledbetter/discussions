@@ -1,1 +1,59 @@
-users
+<md-input-container class="md-block md-dense" flex>
+  <label>Search</label>
+  <input ng-model="search">
+</md-input-container>
+<md-toolbar class="md-hue-1 bgc-light-blue-50" ng-if="selected">
+  <div class="md-toolbar-tools">
+    <span class="md-body-1">{{selected.length}} {{selected.length > 1 ? 'items' : 'item'}} selected</span>
+    <span flex></span>
+    <md-button class="md-icon-button">
+      <md-icon md-svg-icon="social:person_add"></md-icon>
+      <md-tooltip>Add to group</md-tooltip>
+    </md-button>
+    <md-button class="md-icon-button">
+      <md-icon md-svg-icon="communication:call_merge"></md-icon>
+      <md-tooltip>Merge user records</md-tooltip>
+    </md-button>
+    <md-button class="md-icon-button">
+      <md-icon md-svg-icon="action:delete"></md-icon>
+      <md-tooltip>Delete</md-tooltip>
+    </md-button>
+  </div>
+  <md-divider></md-divider>
+</md-toolbar>
+<md-list>
+  <md-list-item ng-repeat="item in getNumber(number) track by $index">
+      <md-checkbox ng-model="item.selected" ng-click="$parent.selected = !$parent.selected"></md-checkbox>
+      <md-icon class="md-avatar md-avatar-icon" md-svg-icon="avatar:svg-{{ ($index + 1) % 11 }}"></md-icon>
+      <p>{{ person.name || 'Firstname Lastname'}}</p>
+      <md-menu class="md-secondary" md-position-mode="target-right target">
+        <md-button aria-label="menu" class="md-icon-button" ng-click="openMenu($mdOpenMenu, $event)">
+          <md-icon md-svg-icon="navigation:more_vert"></md-icon>
+        </md-button>
+        <md-menu-content width="4">
+          <md-menu-item>
+            <md-button>
+              <md-icon md-svg-icon="communication:email"></md-icon> Email
+            </md-button>
+          </md-menu-item>
+          <md-menu-item>
+            <md-button>
+              <md-icon md-svg-icon="image:edit"></md-icon> Edit
+            </md-button>
+          </md-menu-item>
+          <md-menu-item>
+            <md-button>
+              <md-icon md-svg-icon="content:remove_circle"></md-icon> Remove from team
+            </md-button>
+          </md-menu-item>
+          <md-menu-divider></md-menu-divider>
+          <md-menu-item>
+            <md-button>
+              <md-icon md-svg-icon="navigation:cancel"></md-icon> Delete
+            </md-button>
+          </md-menu-item>
+        </md-menu-content>
+      </md-menu>
+      <md-divider ng-if="!$last"></md-divider>
+  </md-list-item>
+</md-list>

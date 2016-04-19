@@ -82,6 +82,32 @@ md-input-container {
  }
 }
 
+md-input-container.md-dense {
+  margin-bottom: 5px;
+  .md-errors-spacer {
+    min-height: 0;
+  }
+}
+md-chips.md-dense {
+  .md-chips {
+     .md-chip-input-container {
+       line-height: normal;
+       height: auto;
+     }
+  }
+  .md-errors-spacer {
+    min-height: 0;
+  }
+}
+
+@for $i from 1 through 4 {
+  .md-dp-#{$i} {
+    z-index: 0 + $i
+  }
+}
+
+
+
 // Component styles are injected through grunt
 // injector
 @import 'bookmarks/bookmarks.scss';

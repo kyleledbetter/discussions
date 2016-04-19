@@ -1,1 +1,70 @@
-test
+<md-input-container class="md-block md-dense">
+  <label>List Name</label>
+  <input ng-model="list.name">
+</md-input-container>
+<div layout="row" layout-align="start center">
+  <md-input-container class="md-block md-dense" flex="90">
+    <label>List email address</label>
+    <input ng-model="list.address">
+  </md-input-container>
+  <div>
+    @domain.com
+  </div>
+</div>
+<md-input-container class="md-block">
+  <label>Tags</label>
+  <md-chips ng-model="tags" class="md-dense"></md-chips>
+</md-input-container>
+<md-toolbar class="md-hue-1">
+  <md-fab-actions class="md-toolbar-tools">
+    <md-button aria-label="button" class="md-icon-button">
+      <md-icon md-svg-icon="editor:format_bold"></md-icon>
+    </md-button>
+    <md-button aria-label="button" class="md-icon-button">
+      <md-icon md-svg-icon="editor:format_italic"></md-icon>
+    </md-button>
+    <md-button aria-label="button" class="md-icon-button">
+      <md-icon md-svg-icon="editor:format_underlined"></md-icon>
+    </md-button>
+    <md-button aria-label="button" class="md-icon-button">
+      <md-icon md-svg-icon="editor:format_quote"></md-icon>
+    </md-button>
+    <md-button aria-label="button" class="md-icon-button">
+      <md-icon md-svg-icon="editor:strikethrough_s"></md-icon>
+    </md-button>
+    <md-button aria-label="button" class="md-icon-button">
+      <md-icon md-svg-icon="editor:insert_link"></md-icon>
+    </md-button>
+    <md-button aria-label="button" class="md-icon-button">
+      <md-icon md-svg-icon="editor:insert_photo"></md-icon>
+    </md-button>
+    <md-button aria-label="button" class="md-icon-button">
+      <md-icon md-svg-icon="editor:insert_drive_file"></md-icon>
+    </md-button>
+    <md-button aria-label="button" class="md-icon-button">
+      <md-icon md-svg-icon="editor:format_list_bulleted"></md-icon>
+    </md-button>
+    <md-button aria-label="button" class="md-icon-button">
+      <md-icon md-svg-icon="editor:format_list_numbered"></md-icon>
+    </md-button>
+    <md-button aria-label="button" class="md-icon-button">
+      <md-icon md-svg-icon="editor:format_list_numbered"></md-icon>
+    </md-button>
+    <md-button aria-label="button" class="md-icon-button">
+      <md-icon md-svg-icon="editor:format_align_left"></md-icon>
+    </md-button>
+    <md-button aria-label="button" class="md-icon-button">
+      <md-icon md-svg-icon="editor:format_align_center"></md-icon>
+    </md-button>
+    <md-button aria-label="button" class="md-icon-button">
+      <md-icon md-svg-icon="editor:format_align_right"></md-icon>
+    </md-button>
+  </md-fab-actions>
+</md-toolbar>
+<md-divider></md-divider>
+<div class="md-padding">
+  <md-input-container class="md-block">
+    <label>List description</label>
+    <textarea class="md-textarea-tall" ng-model="list.description" md-maxlength="10000" rows="20" md-select-on-focus md-autofocus></textarea>
+  </md-input-container>
+</div>
